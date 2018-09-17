@@ -1,8 +1,8 @@
-.sidenav_menu {
+.sidenav_projects {
   height: 100%;
   width: 30px;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.9);
@@ -11,5 +11,24 @@
   font-weight: 700;
   font-size: 20px;
   color: #fff; }
-  .sidenav_menu h3 {
+  .sidenav_projects h3 {
     transform: rotate(90deg); }
+
+.sidenav_about {
+  height: 100%;
+  width: 60px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow-x: hidden;
+  transition: 0.5s;
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff; }
+  .sidenav_about h3 {
+    transform: rotate(90deg); }
+  .sidenav_about .closebtn2 {
+    position: fixed;
+    left: 33px; }
