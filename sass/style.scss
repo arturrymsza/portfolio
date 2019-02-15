@@ -1,10 +1,113 @@
 header {
 	.menu {
+		position: fixed;
 		height: 10vh;
+		width: 100vw;
 		display: flex;
 		justify-content: space-around;
 		align-items: center; 
 		flex-wrap: wrap;
+		z-index: 2;
+	}
+}
+
+main {
+	.jumbotron {
+		position: relative;
+		z-index: 0;
+		height: 100vh;
+		display: flex;
+		justify-content: space-between;
+		.slogan {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 1;
+			height: 100vh;
+		}
+	}
+
+	.about {
+		.description {
+			position: relative;
+			z-index: 0;
+			height: 50vh;
+			display: flex;
+			justify-content: space-between;
+
+			.desc_txt {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+			}
+		}
+	}
+
+	.offer_quick {
+		position: relative;
+		z-index: 0;
+		height: 50vh;
+		display: flex;
+		justify-content: space-between;
+
+		.offer_list {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+		}
+	}
+
+	.reference {
+		position: relative;
+		z-index: 0;
+		height: 50vh;
+		display: flex;
+		justify-content: space-between;
+
+		.ref_people {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+		}
+	}
+}
+
+footer {
+	position: relative;
+	z-index: 0;
+	height: 50vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	h2 {
+		text-align: center;
+	}
+
+	.contact {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		padding: 3vh;
+		width: 100%;
+		max-width: 1140px;
+
+		.adres {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.contact_other {
+			display: flex;
+			flex-direction: column;
+
+			.facebook {
+				display: flex;
+				flex-direction: row;
+			}
+		}
 	}
 }
 
@@ -12,7 +115,7 @@ header {
 	height: 100%;
 	width: 0;
 	position: fixed;
-	z-index: 2;
+	z-index: 4;
 	top: 0;
 	left: 0;
 	background-color: rgba(0,0,0,0.9);
@@ -42,7 +145,7 @@ header {
 	height: 100%;
 	width: 0;
 	position: fixed;
-	z-index: 1;
+	z-index: 5;
 	top: 0;
 	left: 0;
 	background-color: rgba(0,0,0,0.6);
