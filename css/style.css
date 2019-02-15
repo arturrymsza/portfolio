@@ -1,34 +1,89 @@
+header .menu {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .sidenav_projects {
   height: 100%;
-  width: 30px;
+  width: 0;
   position: fixed;
   z-index: 2;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.9);
   overflow-x: hidden;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   font-weight: 700;
   font-size: 20px;
-  color: #fff; }
-  .sidenav_projects h3 {
-    transform: rotate(90deg); }
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidenav_projects h3 {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  color: white;
+}
+
+.sidenav_projects .closebtn1 {
+  position: relative;
+  top: 15px;
+  left: 15px;
+  z-index: 5;
+}
 
 .sidenav_about {
   height: 100%;
-  width: 60px;
+  width: 0;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.6);
   overflow-x: hidden;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   font-weight: 700;
   font-size: 20px;
-  color: #fff; }
-  .sidenav_about h3 {
-    transform: rotate(90deg); }
-  .sidenav_about .closebtn2 {
-    position: fixed;
-    left: 33px; }
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidenav_about h3 {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.sidenav_about .closebtn2 {
+  position: relative;
+  top: 15px;
+  left: 15px;
+  z-index: 5;
+}
+/*# sourceMappingURL=style.css.map */
