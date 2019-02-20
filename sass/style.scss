@@ -18,6 +18,22 @@ main {
 		height: 100vh;
 		display: flex;
 		justify-content: space-between;
+		.logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative; 
+			height: 100%; 
+			width: 35%; 
+			padding: 0;
+			padding-bottom: 100%;
+			svg { 
+				height: 100%; 
+				width: 100%; 
+				left: 0; 
+				top: 0;
+			}
+		}
 		.slogan {
 			position: relative;
 			display: flex;
@@ -25,6 +41,14 @@ main {
 			align-items: center;
 			z-index: 1;
 			height: 100vh;
+			width: 65%;
+			background-image: url(../img/jumbotron.jpg);
+			background-size: cover; 
+			color: white;
+
+			h1 {
+				font-size: 5vh;
+			}
 		}
 	}
 
