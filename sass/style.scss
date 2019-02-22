@@ -1,5 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&subset=latin-ext');
+
+$headercolor: rgba(255, 217, 0, 0.8);
+
 body {
 	background-color: white;
+	margin: 0;
+	padding: 0;
+	font-family: 'Lato', sans-serif;
+
+.bold {
+	font-weight: 700;
+}
+
+.black {
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.regular {
+	font-weight: 400;
+}
+
+.thin {
+	font-weight: 300;
+}
+
 header {
 	.menu {
 		position: fixed;
@@ -10,6 +35,8 @@ header {
 		align-items: center; 
 		flex-wrap: wrap;
 		z-index: 2;
+		font-size: 3vh;
+		color: rgba(170, 170, 170, 0.7);
 	}
 }
 
@@ -46,10 +73,14 @@ main {
 			width: 65%;
 			background-image: url(../img/jumbotron2.jpg);
 			background-size: cover; 
+			background-position: left bottom;
 			color: white;
 
 			h1 {
-				font-size: 5vh;
+				font-size: 10vh;
+				line-height: 15vh;
+				font-weight: 900;
+				text-align: right;
 			}
 		}
 	}
@@ -64,18 +95,36 @@ main {
 
 			.desc_txt {
 				display: flex;
-				flex-direction: column;
+				flex-direction: row;
 				justify-content: space-around;
+				align-items: center;
+				width: 65%;
+
+				h2 {
+					white-space: nowrap;
+					position: static;
+					transform: rotate(90deg);
+					transform-origin: 70% 80%;
+					font-size: 17vh;
+					color: $headercolor;
+					z-index: 2;
+				}
+
+				p {
+					position: relative;
+					z-index: 3;
+					transform: translateX(5vw);
+				}
 			}
 
-			.picture {
+			.picture_desc {
 				position: relative;
 				z-index: 1;
 				height: 50vh;
-				width: 35.28%;
+				width: 35%;
 				background-image: url(../img/ja.jpg);
 				background-size: cover;
-				background-position: right;
+				background-position: right top;
 			}
 		}
 	}
@@ -89,8 +138,39 @@ main {
 
 		.offer_list {
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
 			justify-content: space-around;
+			align-items: center;
+			width: 50%;
+
+			.box {
+				display: flex;
+				height: 50vh;
+				align-items: flex-end;
+				width: 17vw;
+				h2 {
+					transform: rotate(-90deg);
+					transform-origin: 15% 80%;
+					font-size: 17vh;
+					color: $headercolor;
+				}
+			}
+
+			ul {
+				transform: translateX(-5vw);
+				font-size: 4vh;
+				line-height: 8vh;
+			}
+		}
+
+		.picture_offer {
+			position: relative;
+			z-index: 1;
+			height: 50vh;
+			width: 50%;
+			background-image: url(../img/oferta.jpg);
+			background-size: cover;
+			background-position: left bottom;
 		}
 	}
 
@@ -98,13 +178,43 @@ main {
 		position: relative;
 		z-index: 0;
 		height: 50vh;
+		width: 100%;
 		display: flex;
+		flex-direction: row;
 		justify-content: space-between;
 
+		.picture_opinion {
+			position: relative;
+			z-index: 1;
+			height: 50vh;
+			width: 50%;
+			background-image: url(../img/opinie.jpg);
+			background-size: cover;
+			background-position: right top;
+		}
+
 		.ref_people {
+			position: relative;
+			z-index: 0;
+			height: 50vh;
+			width: 50%;
 			display: flex;
-			flex-direction: column;
-			justify-content: space-around;
+			justify-content: space-between;
+			align-items: center;
+
+			.opinion {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: space-around;
+			}
+
+			h2 {
+				transform: rotate(90deg);
+				transform-origin: 70% 80%;
+				font-size: 17vh;
+				color: $headercolor;
+			}
 		}
 	}
 }
@@ -112,38 +222,68 @@ main {
 footer {
 	position: relative;
 	z-index: 0;
-	height: 20vh;
+	max-height: 25vh;
+	overflow: hidden;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 
-	h2 {
-		text-align: center;
-	}
-
-	.contact {
+	.contact_txt {
+		position: relative;
+		z-index: 0;
+		height: 25vh;
+		width: 50%;
 		display: flex;
+		flex-direction: row;
 		justify-content: space-between;
-		align-items: flex-end;
-		padding: 3vh;
-		width: 100%;
-		max-width: 1140px;
+		align-items: center;
 
-		.adres {
+		h2 {
+			text-align: center;
+			transform: rotate(-90deg);
+			transform-origin: 30% 60%;
+			font-size: 7vh;
+			color: $headercolor;
+		}
+
+		.contact {
 			display: flex;
 			justify-content: space-between;
-		}
+			align-items: flex-end;
+			padding: 3vh;
+			width: 100%;
+			max-width: 1140px;
 
-		.contact_other {
-			display: flex;
-			flex-direction: column;
-
-			.facebook {
+			.adres {
 				display: flex;
-				flex-direction: row;
+				justify-content: space-between;
+				
+				p {
+					padding: 2vh;
+				}
+			}
+
+			.contact_other {
+				display: flex;
+				flex-direction: column;
+
+				.facebook {
+					display: flex;
+					flex-direction: row;
+				}
 			}
 		}
+	}
+
+	.picture_contact {
+		position: relative;
+		z-index: 1;
+		height: 25vh;
+		width: 50%;
+		background-image: url(../img/contact.jpg);
+		background-size: cover;
+		background-position: left;
 	}
 }
 
