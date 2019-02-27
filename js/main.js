@@ -33,7 +33,7 @@ Vue.component('page',{
         <a href="javascript:void(0)" class="closebtn1" onclick="closeNav1()">x</a>
         <div class="sidenav linesnav">
             <card>
-                <h2 slot="header">Tytuł</h2>
+                <h2 slot="header">Tytuł test</h2>
                 <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </card>
             <card></card>
