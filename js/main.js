@@ -17,14 +17,34 @@ function closeNav2() {
 
 Vue.component('card',{
 template: `
-<div class="card">
+<div class="card" :style="styleObject" @mouseover="showText" @mouseleave="noText">
   <slot name="header"></slot>
   <slot name="content"></slot>
+  <p>test</p>
 </div>
 `,
 data() {
-    return
+    return {
+        styleObject: {
+            width: '300px',
+			height: '400px'
+          }
+    }
 },
+methods: {
+    showText() {
+        this.styleObject = {
+            width: '320px',
+			height: '430px'
+          }
+    },
+    noText() {
+        this.styleObject = {
+            width: '300px',
+			height: '400px'
+          }
+    }
+}
 });
 
 Vue.component('page',{
@@ -36,6 +56,7 @@ Vue.component('page',{
                 <h2 slot="header">Tytuł test</h2>
                 <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </card>
+            <card></card>
             <card></card>
             <card></card>
             <card></card>

@@ -312,12 +312,11 @@ footer {
 			width: 100vw;
 			flex-wrap: wrap;
 			.card {
-				width: 240px;
-				height: 320px;
 				background-color: rgb(179, 179, 179);
-				box-shadow:
-				rgba(black, 0.66) 0 30px 60px 0;
+				box-shadow: rgba(black, 0.66) 0 30px 60px 0;
+          }
 		}
+		
 	}
 
 	.closebtn1 {

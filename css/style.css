@@ -443,13 +443,7 @@ body .sidenav_projects .sidenav {
 }
 
 body .sidenav_projects .sidenav .card {
-  width: 240px;
-  height: 320px;
   background-color: #b3b3b3;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0;
-          box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0;
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 
 body .sidenav_projects .closebtn1 {
