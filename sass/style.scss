@@ -294,7 +294,7 @@ footer {
 	z-index: 4;
 	top: 0;
 	left: 0;
-	background-color: rgba(0,0,0,0.9);
+	background-color: rgba(255, 255, 255, 0.8);
 	overflow-x: hidden;
 	transition: 0.5s;
 	font-weight: 700;
@@ -304,11 +304,23 @@ footer {
 	justify-content: center;
 	align-items: center;
 
-	h3 {
-
-		transform: rotate(90deg);
-		color: white;
+	.sidenav 
+		{
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			width: 100vw;
+			flex-wrap: wrap;
+			.card {
+				width: 240px;
+				height: 320px;
+				background-color: rgb(179, 179, 179);
+				box-shadow:
+				rgba(black, 0.66) 0 30px 60px 0;
+				transition: 1s;
+		}
 	}
+
 	.closebtn1 {
 		position: relative;
 		top: 15px;

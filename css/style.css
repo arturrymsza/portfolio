@@ -410,7 +410,7 @@ body .sidenav_projects {
   z-index: 4;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(255, 255, 255, 0.8);
   overflow-x: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -428,10 +428,28 @@ body .sidenav_projects {
           align-items: center;
 }
 
-body .sidenav_projects h3 {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  color: white;
+body .sidenav_projects .sidenav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body .sidenav_projects .sidenav .card {
+  width: 240px;
+  height: 320px;
+  background-color: #b3b3b3;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0;
+          box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 body .sidenav_projects .closebtn1 {

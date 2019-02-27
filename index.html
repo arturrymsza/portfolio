@@ -232,7 +232,7 @@
 					<h1 class="animated zoomIn delay-1_5s">pokaż się<br>z dobrej<br>strony</h1>
 				</div>
 			</div>
-			<div class="about" id="page">
+			<div v-if="showAbout" class="about" id="page">
 				<div class="description">
 					<div class="picture_desc animated fadeInLeft" id="picture">
 					</div>
@@ -300,10 +300,9 @@
 		</footer>
 		<div class="sidebars">
 			<div id="projectssidenav" class="sidenav_projects" >
-				<div class="sidenav linesnav">
-					<h3>projekty</h3>
+				<div id="app">
+					<page></page>
 				</div>
-				<a href="javascript:void(0)" class="closebtn1" onclick="closeNav1()">x</a>
 			</div>
 			<div id="aboutsidenav" class="sidenav_about">
 				<div class="sidenav linesnav">
