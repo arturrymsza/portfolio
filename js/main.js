@@ -17,7 +17,7 @@ function closeNav2() {
 
 Vue.component('card',{
 template: `
-<div class="card" :style="styleObject" @mouseover="showText" @mouseleave="noText">
+<div class="card" :style="{transform: activeScale}" :class="{ project: openProject }" @mouseover="showText" @mouseleave="noText" @click="project">
   <slot name="header"></slot>
   <slot name="content"></slot>
   <p>test</p>
@@ -25,24 +25,19 @@ template: `
 `,
 data() {
     return {
-        styleObject: {
-            width: '300px',
-			height: '400px'
-          }
+        activeScale: 'scale(1)',
+        openProject: false
     }
 },
 methods: {
     showText() {
-        this.styleObject = {
-            width: '320px',
-			height: '430px'
-          }
+        this.activeScale =  'scale(1.07)'
     },
     noText() {
-        this.styleObject = {
-            width: '300px',
-			height: '400px'
-          }
+        this.activeScale =  'scale(1)'
+    },
+    project() {
+        this.openProject = !this.openProject
     }
 }
 });

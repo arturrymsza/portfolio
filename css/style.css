@@ -443,7 +443,24 @@ body .sidenav_projects .sidenav {
 }
 
 body .sidenav_projects .sidenav .card {
+  position: relative;
+  z-index: 8;
+  width: 300px;
+  height: 400px;
   background-color: #b3b3b3;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0;
+          box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0;
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
+}
+
+body .sidenav_projects .sidenav .project {
+  position: absolute;
+  z-index: 99 !important;
+  width: 90%;
+  height: 90%;
+  -webkit-transition: ease-in-out 1.2s;
+  transition: ease-in-out 1.2s;
 }
 
 body .sidenav_projects .closebtn1 {
