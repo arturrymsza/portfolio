@@ -47,7 +47,7 @@ Vue.component('page',{
     `<div>
         <a href="javascript:void(0)" class="closebtn1" onclick="closeNav1()">x</a>
         <div class="sidenav linesnav">
-            <card>
+            <card :style="{backgroundImage: background1}">
                 <h2 slot="header">Tytuł test</h2>
                 <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </card>
@@ -58,7 +58,7 @@ Vue.component('page',{
         </div>
     </div>`,
     data() {
-        test=false
+        background1 = 'url(../img/rozklad.jpg)'
     },
 });
 

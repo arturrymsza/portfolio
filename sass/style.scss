@@ -294,7 +294,7 @@ footer {
 	z-index: 4;
 	top: 0;
 	left: 0;
-	background-color: rgba(255, 255, 255, 0.8);
+	background-color: rgba(255, 255, 255, 0.9);
 	overflow-x: hidden;
 	transition: 0.5s;
 	font-weight: 700;
@@ -311,28 +311,40 @@ footer {
 			align-items: center;
 			width: 100vw;
 			flex-wrap: wrap;
+
 			.card {
+				color: red;
 				position: relative;
 				z-index: 8;
-				width: 300px;
 				height: 400px;
-				background-color: rgb(179, 179, 179);
+				width: 300px;
+				background-size: cover;
+				background-position: center;
 				box-shadow:
 				rgba(black, 0.66) 0 30px 60px 0;
-				transition: ease-in-out 0.2s;
+				transition: none;
+				h2 {
+					visibility: hidden;
+				}
+				
 			}
 			.project {
+				background-image: none !important;
+				background-color: aquamarine;
+				height: 80%;
+				width: 80%;
+				transition: ease-in-out 0.5s;
 				position: absolute; 
-				z-index: 99 !important;
-				width: 90%;
-				height: 90%;
-				transition: ease-in-out 1.2s;
+				z-index: 99;
+				h2 {
+					visibility: visible;
+				}
 			}
 		
 	}
 
 	.closebtn1 {
-		position: relative;
+		position: absolute;
 		top: 15px;
 		left: 15px;
 		z-index: 5;	
