@@ -432,8 +432,9 @@ body .sidenav_projects .sidenav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -443,6 +444,7 @@ body .sidenav_projects .sidenav {
 }
 
 body .sidenav_projects .sidenav .card {
+  margin: 1vw;
   color: red;
   position: relative;
   z-index: 8;
@@ -456,23 +458,102 @@ body .sidenav_projects .sidenav .card {
   transition: none;
 }
 
-body .sidenav_projects .sidenav .card h2 {
-  visibility: hidden;
+body .sidenav_projects .sidenav .card .content {
+  display: none;
 }
 
 body .sidenav_projects .sidenav .project {
   background-image: none !important;
   background-color: aquamarine;
-  height: 80%;
-  width: 80%;
-  -webkit-transition: ease-in-out 0.5s;
-  transition: ease-in-out 0.5s;
+  height: 90%;
+  width: 90%;
+  max-width: 1000px;
+  -webkit-transition: 1s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: 1s cubic-bezier(0.23, 1, 0.32, 1);
   position: absolute;
   z-index: 99;
 }
 
-body .sidenav_projects .sidenav .project h2 {
-  visibility: visible;
+body .sidenav_projects .sidenav .project .content {
+  display: contents;
+  width: 100%;
+}
+
+body .sidenav_projects .sidenav .project .content .content-header {
+  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: row;
+      -ms-flex: row;
+          flex: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  height: 30%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .sidenav_projects .sidenav .project .content .content-header .content-logo {
+  height: 50%;
+  padding: 5vh 5vw;
+}
+
+body .sidenav_projects .sidenav .project .content .content-header .content-picture {
+  height: 100%;
+}
+
+body .sidenav_projects .sidenav .project .content .content-description {
+  background-color: blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  height: 40%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .sidenav_projects .sidenav .project .content .content-description2 {
+  background-color: violet;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 40%;
+}
+
+body .sidenav_projects .sidenav .project .content .content-footer {
+  background-color: yellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 10%;
+  width: 100%;
 }
 
 body .sidenav_projects .closebtn1 {
