@@ -471,6 +471,8 @@ body .sidenav_projects .sidenav .project {
   -webkit-transition: 1s cubic-bezier(0.23, 1, 0.32, 1);
   transition: 1s cubic-bezier(0.23, 1, 0.32, 1);
   position: absolute;
+  -webkit-transform: none !important;
+          transform: none !important;
   z-index: 99;
 }
 

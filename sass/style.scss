@@ -339,6 +339,7 @@ footer {
 				max-width: 1000px;
 				transition:  1s cubic-bezier(0.23, 1, 0.320, 1);
 				position: absolute; 
+				transform: none !important;
 				z-index: 99;
 
 				.content {

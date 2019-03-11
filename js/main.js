@@ -16,37 +16,22 @@ function closeNav2() {
 }
 
 Vue.component('card',{
+props: ['logo', 'picture', 'title', 'description', 'picture2', 'description2'],
 template: `
 <div class="card" :style="{transform: activeTransform}" :class="{ project: openProject }" 
 @mouseover="showText" @mouseleave="noText" @click="project">
     <div class="content">
         <div class="content-header">
-            <img class="content-logo" src="../img/logo-rozklad.png" alt="">
-            <img class="content-picture" src="../img/rozklad2.jpg" alt="">
+            <img class="content-logo" src="logo" alt="">
+            <img class="content-picture" src="picture" alt="">
         </div>
         <div class="content-description">
-            <h2>Interaktywny Rozkład Jazdy KM Kościerzyna</h2>
-            <p>Nulla fermentum ullamcorper justo sed aliquet. Nullam egestas sollicitudin rhoncus. 
-            In eget dolor vitae orci interdum luctus quis in nulla. Fusce eget lacinia ligula. 
-            Sed egestas, lacus sit amet iaculis maximus, quam arcu egestas quam, vitae eleifend est est eu risus. 
-            Etiam pharetra libero congue est bibendum varius. Cras tincidunt tellus quis felis imperdiet consectetur. 
-            Morbi id enim mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-            Donec in dolor vel velit porttitor cursus. Donec est mauris, lobortis vel tellus vitae, lobortis malesuada massa. 
-            Etiam a consectetur nisl, sit amet venenatis eros. Phasellus magna nunc, vestibulum in pretium sed, faucibus id felis. 
-            Ut et dapibus tortor.</p>
+            <h2>{{ title }}</h2>
+            <p>{{ description }}</p>
         </div>
         <div class="content-description2">
-            <img src="" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Morbi ullamcorper sapien erat, ut eleifend mi ultricies in. 
-            Duis at sapien ex. Quisque maximus mauris ut mi sodales luctus. 
-            Mauris vitae ligula et turpis feugiat vehicula vel nec leo. 
-            Aliquam aliquet auctor erat, ut maximus dolor consectetur et. 
-            In nec est auctor, ullamcorper enim sed, elementum odio. 
-            Sed ultricies nibh id egestas porta. Maecenas vehicula congue sollicitudin. 
-            Donec tristique lorem et neque auctor, ut sagittis enim ultrices. 
-            Duis gravida tincidunt odio. Integer ullamcorper volutpat tincidunt. 
-            Sed consequat scelerisque nulla. Nam nec auctor nunc.</p>
+            <img src="picture2" alt="">
+            <p>{{ description2 }}</p>
         </div>
         <div class="content-footer"></div>
     </div>
@@ -56,21 +41,8 @@ data() {
     return {
         activeTransform: 'scale(1) skewX(-14deg)',
         openProject: false,
-  /*      text: 'fajny',
-        brand: [
-            {
-              brandId: 1,
-              brandTitle: 'Interaktywny rozkład jazdy',
-              brandImage:  '../img/opinie.jpg',
-              brandLogo: '',  
-            },
-            {
-              variantId: 2235,
-              variantColor: 'blue',
-              variantImage: 'https://www.vuemastery.com/images/challenges/vmSocks-blue-onWhite.jpg',
-              variantQuantity: 0     
-            }
-          ],*/
+     
+        
     }
 },
 methods: {
@@ -91,15 +63,48 @@ Vue.component('page',{
     `<div>
         <a href="javascript:void(0)" class="closebtn1" onclick="closeNav1()">x</a>
         <div class="sidenav linesnav">
-            <card :style="{backgroundImage: background1}">
+            <card 
+            v-for="brand in brands"
+            :key="brand.index"
+            :logo="brand.logo"
+            :picture="brand.picture"
+            :title="brand.title"
+            :description="brand.description"
+            :picture2="brand.picture2"
+            :description2="brand.description2">
             </card>
-            <card></card>
-            <card></card>
-            <card></card>
-            <card></card>
         </div>
     </div>`,
     data() {
+        brands= [
+            {
+              index: 1,
+              logo: '../img/logo-rozklad.png',
+              picture:  '../img/rozklad2.jpg',
+              title: 'Interaktywny Rozkład Jazdy KM Kościerzyna',  
+              description: 'Nulla fermentum ullamcorper justo sed aliquet. Nullam egestas sollicitudin rhoncus.',
+              picture2: '../img/opinie.jpg',
+              description2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+            },
+            {
+              index: 2,
+              logo: '../img/logo-rozklad.png',
+              picture:  '../img/opinie.jpg',
+              title: 'jbsjdbjsdbs',  
+              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
+              picture2: '../img/opinie.jpg',
+              description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
+            },
+            {
+                index: 3,
+                logo: '../img/logo-rozklad.png',
+                picture:  '../img/opinie.jpg',
+                title: 'TRÓJECZKA',  
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
+                picture2: '../img/opinie.jpg',
+                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
+              }
+          ],
         background1 = 'url(../img/rozklad.jpg)'
     },
 });
