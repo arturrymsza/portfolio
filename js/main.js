@@ -16,9 +16,9 @@ function closeNav2() {
 }
 
 Vue.component('card',{
-props: ['logo', 'picture', 'title', 'description', 'picture2', 'description2'],
+props: ['background', 'logo', 'picture', 'title', 'description', 'picture2', 'description2'],
 template: `
-<div class="card" :style="{transform: activeTransform}" :class="{ project: openProject }" 
+<div class="card" :style="{transform: activeTransform, backgroundImage: background}" :class="{ project: openProject }" 
 @mouseover="showText" @mouseleave="noText" @click="project">
     <div class="content">
         <div class="content-header">
@@ -39,18 +39,16 @@ template: `
 `,
 data() {
     return {
-        activeTransform: 'scale(1) skewX(-14deg)',
-        openProject: false,
-     
-        
+        activeTransform: 'scale(1) skewX(-12deg)',
+        openProject: false     
     }
 },
 methods: {
     showText() {
-        this.activeTransform =  'scale(1.07) skewX(-14deg)'
+        this.activeTransform =  'scale(1.07) skewX(-12deg)'
     },
     noText() {
-        this.activeTransform =  'scale(1) skewX(-14deg)'
+        this.activeTransform =  'scale(1) skewX(-12deg)'
     },
     project() {
         this.openProject = !this.openProject
@@ -66,6 +64,7 @@ Vue.component('page',{
             <card 
             v-for="brand in brands"
             :key="brand.index"
+            :background="brand.background"
             :logo="brand.logo"
             :picture="brand.picture"
             :title="brand.title"
@@ -79,6 +78,7 @@ Vue.component('page',{
         brands= [
             {
               index: 1,
+              background: 'url(../img/rozklad.jpg)',
               logo: '../img/logo-rozklad.png',
               picture:  '../img/rozklad2.jpg',
               title: 'Interaktywny Rozkład Jazdy KM Kościerzyna',  
@@ -88,6 +88,7 @@ Vue.component('page',{
             },
             {
               index: 2,
+              background: 'url(../img/rozklad.jpg)',
               logo: '../img/logo-rozklad.png',
               picture:  '../img/opinie.jpg',
               title: 'jbsjdbjsdbs',  
@@ -97,6 +98,7 @@ Vue.component('page',{
             },
             {
                 index: 3,
+                background: 'url(../img/rozklad.jpg)',
                 logo: '../img/logo-rozklad.png',
                 picture:  '../img/opinie.jpg',
                 title: 'TRÓJECZKA',  
@@ -104,9 +106,8 @@ Vue.component('page',{
                 picture2: '../img/opinie.jpg',
                 description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
               }
-          ],
-        background1 = 'url(../img/rozklad.jpg)'
-    },
+          ]
+    }
 });
 
 var portfolio = new Vue({
