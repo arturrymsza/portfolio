@@ -20,17 +20,20 @@ props: ['background', 'logo', 'picture', 'title', 'description', 'picture2', 'de
 template: `
 <div class="card" :style="{transform: activeTransform, backgroundImage: background}" :class="{ project: openProject }" 
 @mouseover="showText" @mouseleave="noText" @click="project">
+    <div class="title">
+        <h2>{{ title }}</h2>
+    </div>
     <div class="content">
         <div class="content-header">
-            <img class="content-logo" src="logo" alt="">
-            <img class="content-picture" src="picture" alt="">
+            <img class="content-logo" :src="logo" alt="">
+            <img class="content-picture" :src="picture" alt="">
         </div>
         <div class="content-description">
             <h2>{{ title }}</h2>
             <p>{{ description }}</p>
         </div>
         <div class="content-description2">
-            <img src="picture2" alt="">
+            <img :src="picture2" alt="">
             <p>{{ description2 }}</p>
         </div>
         <div class="content-footer"></div>
@@ -81,29 +84,69 @@ Vue.component('page',{
               background: 'url(../img/rozklad.jpg)',
               logo: '../img/logo-rozklad.png',
               picture:  '../img/rozklad2.jpg',
-              title: 'Interaktywny Rozkład Jazdy KM Kościerzyna',  
+              title: 'Interaktywny Rozkład Jazdy',  
               description: 'Nulla fermentum ullamcorper justo sed aliquet. Nullam egestas sollicitudin rhoncus.',
-              picture2: '../img/opinie.jpg',
+              picture2: '',
               description2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             },
             {
               index: 2,
-              background: 'url(../img/rozklad.jpg)',
+              background: 'url(../img/czarnyogon.jpg)',
               logo: '../img/logo-rozklad.png',
-              picture:  '../img/opinie.jpg',
-              title: 'jbsjdbjsdbs',  
+              picture:  '',
+              title: 'Czarny Ogon',  
               description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
-              picture2: '../img/opinie.jpg',
+              picture2: '',
               description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
             },
             {
                 index: 3,
-                background: 'url(../img/rozklad.jpg)',
+                background: 'url(../img/kolej.jpg)',
                 logo: '../img/logo-rozklad.png',
-                picture:  '../img/opinie.jpg',
-                title: 'TRÓJECZKA',  
+                picture:  '',
+                title: 'Muzeum Kolejnictwa',  
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
-                picture2: '../img/opinie.jpg',
+                picture2: '',
+                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
+              },
+              {
+                index: 4,
+                background: 'url(../img/szyca.jpg)',
+                logo: '../img/logo-rozklad.png',
+                picture:  '',
+                title: 'Krawiectwo Szyca',  
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
+                picture2: '',
+                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
+              },
+              {
+                index: 5,
+                background: 'url(../img/driveforyou.jpg)',
+                logo: '../img/logo-rozklad.png',
+                picture:  '../img/driveforyou.jpg',
+                title: 'Drive for You',  
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
+                picture2: '',
+                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
+              },
+              {
+                index: 6,
+                background: 'url(../img/packland.jpg)',
+                logo: '../img/logo-rozklad.png',
+                picture:  '../img/driveforyou.jpg',
+                title: 'Packland',  
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
+                picture2: '',
+                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
+              },
+              {
+                index: 7,
+                background: 'url(../img/sprytny.jpg)',
+                logo: '../img/logo-rozklad.png',
+                picture:  '../img/driveforyou.jpg',
+                title: 'Sprytny Rozkład',  
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
+                picture2: '',
                 description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
               }
           ]
