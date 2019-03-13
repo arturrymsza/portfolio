@@ -148,6 +148,66 @@ Vue.component('page',{
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
                 picture2: '',
                 description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
+              },
+              {
+                index: 8,
+                background: 'url(../img/hotelik.jpg)',
+                logo: '../img/logo-rozklad.png',
+                picture:  '../img/hotelik.jpg',
+                title: 'Hotelik Kościerzyna',  
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
+                picture2: '',
+                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
+              },
+              {
+                index: 9,
+                background: 'url(../img/cohannah.jpg)',
+                logo: '../img/logo-rozklad.png',
+                picture:  '../img/cohannah.jpg',
+                title: 'Cohannah.com',  
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
+                picture2: '',
+                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
+              },
+              {
+                index: 10,
+                background: 'url(../img/drutex.jpg)',
+                logo: '../img/logo-rozklad.png',
+                picture:  '',
+                title: 'Drutex - wizja',  
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
+                picture2: '',
+                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
+              },
+              {
+                index: 11,
+                background: 'url(../img/apartamenty.jpg)',
+                logo: '../img/logo-rozklad.png',
+                picture:  '',
+                title: 'Apartamenty Darłówko',  
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
+                picture2: '',
+                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
+              },
+              {
+                index: 12,
+                background: 'url(../img/game.jpg)',
+                logo: '../img/logo-rozklad.png',
+                picture:  '',
+                title: 'Tea Break Game',  
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
+                picture2: '',
+                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
+              },
+              {
+                index: 13,
+                background: 'url(../img/owoce.jpg)',
+                logo: '../img/logo-rozklad.png',
+                picture:  '',
+                title: 'Lubelskie Owoce',  
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
+                picture2: '',
+                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
               }
           ]
     }

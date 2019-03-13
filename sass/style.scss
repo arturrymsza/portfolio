@@ -308,8 +308,9 @@ footer {
 		{
 			display: flex;
 			justify-content: center;
-			align-items: center;
+			align-items: flex-start;
 			width: 100vw;
+			height: 100vh;
 			flex-wrap: wrap;
 
 			.card {
