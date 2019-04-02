@@ -16,12 +16,13 @@ function closeNav2() {
 }
 
 Vue.component('card',{
-props: ['background', 'logo', 'picture', 'title', 'description', 'picture2', 'description2'],
+props: ['background', 'logo', 'picture', 'title', 'short', 'description', 'picture2', 'description2'],
 template: `
 <div class="card" :style="{transform: activeTransform, backgroundImage: background}" :class="{ project: openProject }" 
 @mouseover="showText" @mouseleave="noText" @click="project">
     <div class="title">
         <h2>{{ title }}</h2>
+        <p>{{ short }}</p>
     </div>
     <div class="content">
         <div class="content-header">
@@ -71,6 +72,7 @@ Vue.component('page',{
             :logo="brand.logo"
             :picture="brand.picture"
             :title="brand.title"
+            :short="brand.short"
             :description="brand.description"
             :picture2="brand.picture2"
             :description2="brand.description2">
@@ -84,7 +86,8 @@ Vue.component('page',{
               background: 'url(../img/rozklad.jpg)',
               logo: '../img/logo-rozklad.png',
               picture:  '../img/rozklad2.jpg',
-              title: 'Interaktywny Rozkład Jazdy',  
+              title: 'Interaktywny Rozkład Jazdy',
+              short: 'aplikacja webowa',
               description: 'Nulla fermentum ullamcorper justo sed aliquet. Nullam egestas sollicitudin rhoncus.',
               picture2: '',
               description2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
@@ -95,6 +98,7 @@ Vue.component('page',{
               logo: '../img/logo-rozklad.png',
               picture:  '',
               title: 'Czarny Ogon',  
+              short: 'strona www, logo, grafika',
               description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
               picture2: '',
               description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
@@ -104,7 +108,8 @@ Vue.component('page',{
                 background: 'url(../img/kolej.jpg)',
                 logo: '../img/logo-rozklad.png',
                 picture:  '',
-                title: 'Muzeum Kolejnictwa',  
+                title: 'Muzeum Kolejnictwa', 
+                short: 'oprawa graficzna wystawy', 
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
                 picture2: '',
                 description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
@@ -114,7 +119,8 @@ Vue.component('page',{
                 background: 'url(../img/szyca.jpg)',
                 logo: '../img/logo-rozklad.png',
                 picture:  '',
-                title: 'Krawiectwo Szyca',  
+                title: 'Krawiectwo Szyca', 
+                short: 'strona www, logo, grafika', 
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
                 picture2: '',
                 description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
@@ -125,6 +131,7 @@ Vue.component('page',{
                 logo: '../img/logo-rozklad.png',
                 picture:  '../img/driveforyou.jpg',
                 title: 'Drive for You',  
+                short: 'strona www, logo',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
                 picture2: '',
                 description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
@@ -135,6 +142,7 @@ Vue.component('page',{
                 logo: '../img/logo-rozklad.png',
                 picture:  '../img/driveforyou.jpg',
                 title: 'Packland',  
+                short: 'sklep internetowy, logo, grafika',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
                 picture2: '',
                 description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
@@ -144,7 +152,8 @@ Vue.component('page',{
                 background: 'url(../img/sprytny.jpg)',
                 logo: '../img/logo-rozklad.png',
                 picture:  '../img/driveforyou.jpg',
-                title: 'Sprytny Rozkład',  
+                title: 'Sprytny Rozkład',
+                short: 'strona www, logo',  
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
                 picture2: '',
                 description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
@@ -154,7 +163,8 @@ Vue.component('page',{
                 background: 'url(../img/hotelik.jpg)',
                 logo: '../img/logo-rozklad.png',
                 picture:  '../img/hotelik.jpg',
-                title: 'Hotelik Kościerzyna',  
+                title: 'Hotelik Kościerzyna', 
+                short: 'strona www, logo', 
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
                 picture2: '',
                 description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
@@ -164,7 +174,8 @@ Vue.component('page',{
                 background: 'url(../img/cohannah.jpg)',
                 logo: '../img/logo-rozklad.png',
                 picture:  '../img/cohannah.jpg',
-                title: 'Cohannah.com',  
+                title: 'Cohannah.com',
+                short: 'sklep internetowy, logo',  
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
                 picture2: '',
                 description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
@@ -174,7 +185,8 @@ Vue.component('page',{
                 background: 'url(../img/drutex.jpg)',
                 logo: '../img/logo-rozklad.png',
                 picture:  '',
-                title: 'Drutex - wizja',  
+                title: 'Drutex', 
+                short: 'wizja logo i identyfikacji wizualnej', 
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
                 picture2: '',
                 description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
@@ -185,6 +197,7 @@ Vue.component('page',{
                 logo: '../img/logo-rozklad.png',
                 picture:  '',
                 title: 'Apartamenty Darłówko',  
+                short: 'projekt ulotki',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
                 picture2: '',
                 description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
@@ -195,6 +208,7 @@ Vue.component('page',{
                 logo: '../img/logo-rozklad.png',
                 picture:  '',
                 title: 'Tea Break Game',  
+                short: 'aplikacja webowa (gra)',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
                 picture2: '',
                 description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
@@ -205,6 +219,18 @@ Vue.component('page',{
                 logo: '../img/logo-rozklad.png',
                 picture:  '',
                 title: 'Lubelskie Owoce',  
+                short: 'logo',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
+                picture2: '',
+                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
+              },
+              {
+                index: 14,
+                background: 'url(../img/wlad_tlo.png)',
+                logo: '../img/wlad_obraz.png',
+                picture:  '',
+                title: 'Gmina Władysławowo', 
+                short: 'logo - propozycja', 
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
                 picture2: '',
                 description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
