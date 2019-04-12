@@ -488,6 +488,7 @@ body .sidenav_projects .sidenav .card .title {
 
 body .sidenav_projects .sidenav .card .title:hover {
   background-color: rgba(94, 93, 93, 0);
+  cursor: pointer;
 }
 
 body .sidenav_projects .sidenav .card .title h2 {

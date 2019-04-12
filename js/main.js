@@ -95,7 +95,7 @@ Vue.component('page',{
             {
               index: 2,
               background: 'url(../img/czarnyogon.jpg)',
-              logo: '../img/logo-rozklad.png',
+              logo: '../img/logo_czarnyogon.png',
               picture:  '',
               title: 'Czarny Ogon',  
               short: 'strona www, logo, grafika',
@@ -106,7 +106,7 @@ Vue.component('page',{
             {
                 index: 3,
                 background: 'url(../img/kolej.jpg)',
-                logo: '../img/logo-rozklad.png',
+                logo: '../img/logo_muzeum.png',
                 picture:  '',
                 title: 'Muzeum Kolejnictwa', 
                 short: 'oprawa graficzna wystawy', 
@@ -117,7 +117,7 @@ Vue.component('page',{
               {
                 index: 4,
                 background: 'url(../img/szyca.jpg)',
-                logo: '../img/logo-rozklad.png',
+                logo: '../img/logo_szyca.png',
                 picture:  '',
                 title: 'Krawiectwo Szyca', 
                 short: 'strona www, logo, grafika', 
@@ -128,7 +128,7 @@ Vue.component('page',{
               {
                 index: 5,
                 background: 'url(../img/driveforyou.jpg)',
-                logo: '../img/logo-rozklad.png',
+                logo: '../img/logo_drive.png',
                 picture:  '../img/driveforyou.jpg',
                 title: 'Drive for You',  
                 short: 'strona www, logo',
@@ -139,7 +139,7 @@ Vue.component('page',{
               {
                 index: 6,
                 background: 'url(../img/packland.jpg)',
-                logo: '../img/logo-rozklad.png',
+                logo: '../img/logo_packland.png',
                 picture:  '../img/driveforyou.jpg',
                 title: 'Packland',  
                 short: 'sklep internetowy, logo, grafika',
@@ -150,7 +150,7 @@ Vue.component('page',{
               {
                 index: 7,
                 background: 'url(../img/sprytny.jpg)',
-                logo: '../img/logo-rozklad.png',
+                logo: '../img/logo_sprytny.png',
                 picture:  '../img/driveforyou.jpg',
                 title: 'Sprytny Rozkład',
                 short: 'strona www, logo',  
@@ -161,7 +161,7 @@ Vue.component('page',{
               {
                 index: 8,
                 background: 'url(../img/hotelik.jpg)',
-                logo: '../img/logo-rozklad.png',
+                logo: '../img/logo_hotel.png',
                 picture:  '../img/hotelik.jpg',
                 title: 'Hotelik Kościerzyna', 
                 short: 'strona www, logo', 
@@ -172,7 +172,7 @@ Vue.component('page',{
               {
                 index: 9,
                 background: 'url(../img/cohannah.jpg)',
-                logo: '../img/logo-rozklad.png',
+                logo: '../img/logo_cohannah.png',
                 picture:  '../img/cohannah.jpg',
                 title: 'Cohannah.com',
                 short: 'sklep internetowy, logo',  
