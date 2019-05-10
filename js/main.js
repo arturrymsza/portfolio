@@ -16,7 +16,7 @@ function closeNav2() {
 }
 
 Vue.component('card',{
-props: ['background', 'logo', 'picture', 'title', 'short', 'description', 'picture2', 'description2'],
+props: ['background', 'logo', 'picture', 'title', 'short', 'description', 'picture2', 'description2', 'link', 'footerlink'],
 template: `
 <div class="card" :style="{transform: activeTransform, backgroundImage: background}" :class="{ project: openProject }" 
 @mouseover="showText" @mouseleave="noText" @click="project">
@@ -37,7 +37,9 @@ template: `
             <img :src="picture2" alt="">
             <p>{{ description2 }}</p>
         </div>
-        <div class="content-footer"></div>
+        <div class="content-footer">
+          <a :href="link" target="_blank">{{  footerlink  }}</a>
+        </div>
     </div>
  </div>
 `,
@@ -75,7 +77,9 @@ Vue.component('page',{
             :short="brand.short"
             :description="brand.description"
             :picture2="brand.picture2"
-            :description2="brand.description2">
+            :description2="brand.description2"
+            :link="brand.link"
+            :footerlink="brand.footerlink">
             </card>
         </div>
     </div>`,
@@ -88,42 +92,50 @@ Vue.component('page',{
               picture:  '../img/rozklad2.jpg',
               title: 'Interaktywny Rozkład Jazdy',
               short: 'aplikacja webowa',
-              description: 'Nulla fermentum ullamcorper justo sed aliquet. Nullam egestas sollicitudin rhoncus.',
-              picture2: '',
-              description2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+              description: 'Pomysł na stworzenie aplikacji webowej - interaktywnego rozkładu jazdy komunikacji miejskiej w Kościerzynie zrodził się z potrzeby szybkiego sprawdzenia rozkładu jazdy przeze mnie i moich bliskich. Pomyślałem, że taka aplikacja przyda się wszystkim, którzy chcą skorzystać z komunikacji miejskiej w Kościerzynie. Na stronie możecie sprawdzić zarówno kiedy odjeżdża wasz najbliższy autobus, jak i zobaczyć cały rozkład z wybranego przystanku, w wybranym kierunku. W menu jest też możliwość sprawdzenia przebiegu poszczególnych linii oraz pobrania oficjalnego rozkładu jazdy w formacie pdf ze strony Miasta Kościerzyna. Projekt powstał całkowicie społecznie - pro publico bono.',
+              picture2: '../img/rozklad_laptop.png',
+              description2: 'Projekt jest aplikacją webową, z większością elementów Progressive Web Apps, jednak bez możliwości korzystania offline. Mechanizm oparty jest w całości o czysty JavaScript. Prosty styl zbudowałem w CSS za pomocą preprocesora Scss. Struktura to oczywiście HTML 5. Osobiście zaprojektowałem także logo projektu, które oparte jest o symbolikę herbu Kościerzyny (niedźwiedź pod dębem).',
+              link: 'http://koscierzynarozklad.pl',
+              footerlink: 'koscierzynarozklad.pl'
             },
             {
               index: 2,
               background: 'url(../img/czarnyogon.jpg)',
               logo: '../img/logo_czarnyogon.png',
-              picture:  '',
+              picture:  '../img/pies_top.jpg',
               title: 'Czarny Ogon',  
               short: 'strona www, logo, grafika',
-              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
-              picture2: '',
-              description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
+              description: 'Dla mobilnego salonu urody dla zwierząt "Czarny Ogon" stworzyłem stronę internetową, logo, projekty wizytówki i baneru, a także grafiki do mediów społecznościowych, projekt oklejenia samochodu i ulotki.',
+              picture2: '../img/pies_ulotka.jpg',
+              description2: 'Strona internetowa powstała w oparciu o CMS Wordpress, z wykorzystaniem HTML, CSS i Javascript. Zawiera między innymi ciekawy, dynamiczny cennik umożliwiający automatyczny dobór cen i pakietów do rasy psa. Logo posiada dynamiczny przekaz, symbolizujący jednocześnie psa i bańki symbolizujące mycie. Wszystkie materiały tj. ulotki, banery, wizytówki oraz oklejenie samochodu, wraz ze stroną internetową, tworzą spójną identyfikację wizualną.',
+              link: 'http://czarnyogon.pl',
+              footerlink: 'czarnyogon.pl'  
             },
             {
                 index: 3,
                 background: 'url(../img/kolej.jpg)',
                 logo: '../img/logo_muzeum.png',
-                picture:  '',
+                picture:  '../img/muzeum_plansza2.png',
                 title: 'Muzeum Kolejnictwa', 
                 short: 'oprawa graficzna wystawy', 
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
-                picture2: '',
-                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
+                description: 'Na zamówienie Muzeum Kolejnictwa w Kościerzynie stworzyłem projekty 8 plansz i plakatu wystawy pt. "Historia Kolei w Wolnym Mieście Gdańsku"',
+                picture2: '../img/muzeum_plansza.png',
+                description2: 'Projekt jest utrzymany w stylu właściwym dla epoki. Także kolorystyka, fonty i inne detale starają się nawiązywać do czasów, które opisują.',
+                link: 'http://muzeumkolejnictwa.com.pl/',
+                footerlink: 'muzeumkolejnictwa.com.pl' 
               },
               {
                 index: 4,
                 background: 'url(../img/szyca.jpg)',
                 logo: '../img/logo_szyca.png',
-                picture:  '',
+                picture:  '../img/szyca1.png',
                 title: 'Krawiectwo Szyca', 
                 short: 'strona www, logo, grafika', 
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
-                picture2: '',
-                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
+                picture2: '../img/szyca3.png',
+                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.',
+                link: 'https://arturrymsza.github.io/Szyca_Page/',
+                footerlink: 'arturrymsza.github.io/Szyca_Page'  
               },
               {
                 index: 5,
@@ -134,7 +146,9 @@ Vue.component('page',{
                 short: 'strona www, logo',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
                 picture2: '',
-                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
+                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.',
+                link: '',
+                footerlink: ''  
               },
               {
                 index: 6,
@@ -145,7 +159,9 @@ Vue.component('page',{
                 short: 'sklep internetowy, logo, grafika',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
                 picture2: '',
-                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
+                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.',
+                link: '',
+                footerlink: ''  
               },
               {
                 index: 7,
@@ -156,7 +172,9 @@ Vue.component('page',{
                 short: 'strona www, logo',  
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
                 picture2: '',
-                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
+                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.',
+                link: '',
+                footerlink: ''  
               },
               {
                 index: 8,
@@ -167,7 +185,9 @@ Vue.component('page',{
                 short: 'strona www, logo', 
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
                 picture2: '',
-                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
+                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.',
+                link: '',
+                footerlink: ''  
               },
               {
                 index: 9,
@@ -178,7 +198,9 @@ Vue.component('page',{
                 short: 'sklep internetowy, logo',  
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
                 picture2: '',
-                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
+                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.',
+                link: '',
+                footerlink: ''  
               },
               {
                 index: 10,
@@ -189,7 +211,9 @@ Vue.component('page',{
                 short: 'wizja logo i identyfikacji wizualnej', 
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
                 picture2: '',
-                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
+                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.',
+                link: '',
+                footerlink: ''  
               },
               {
                 index: 11,
@@ -200,7 +224,9 @@ Vue.component('page',{
                 short: 'projekt ulotki',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
                 picture2: '',
-                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
+                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.',
+                link: '',
+                footerlink: ''  
               },
               {
                 index: 12,
@@ -211,7 +237,9 @@ Vue.component('page',{
                 short: 'aplikacja webowa (gra)',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
                 picture2: '',
-                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
+                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.',
+                link: '',
+                footerlink: ''  
               },
               {
                 index: 13,
@@ -222,7 +250,9 @@ Vue.component('page',{
                 short: 'logo',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
                 picture2: '',
-                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
+                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.',
+                link: '',
+                footerlink: ''  
               },
               {
                 index: 14,
@@ -233,7 +263,9 @@ Vue.component('page',{
                 short: 'logo - propozycja', 
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
                 picture2: '',
-                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.'  
+                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.',
+                link: '',
+                footerlink: ''  
               }
           ]
     }
