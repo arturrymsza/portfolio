@@ -183,7 +183,7 @@ Vue.component('page',{
               {
                 index: 10,
                 background: 'url(../img/drutex.jpg)',
-                logo: '../img/logo-rozklad.png',
+                logo: '../img/logo_drutex.png',
                 picture:  '',
                 title: 'Drutex', 
                 short: 'wizja logo i identyfikacji wizualnej', 
@@ -194,7 +194,7 @@ Vue.component('page',{
               {
                 index: 11,
                 background: 'url(../img/apartamenty.jpg)',
-                logo: '../img/logo-rozklad.png',
+                logo: '../img/logo_apartamenty.png',
                 picture:  '',
                 title: 'Apartamenty Darłówko',  
                 short: 'projekt ulotki',
@@ -205,7 +205,7 @@ Vue.component('page',{
               {
                 index: 12,
                 background: 'url(../img/game.jpg)',
-                logo: '../img/logo-rozklad.png',
+                logo: '',
                 picture:  '',
                 title: 'Tea Break Game',  
                 short: 'aplikacja webowa (gra)',
@@ -216,7 +216,7 @@ Vue.component('page',{
               {
                 index: 13,
                 background: 'url(../img/owoce.jpg)',
-                logo: '../img/logo-rozklad.png',
+                logo: '../img/logo_owoce.png',
                 picture:  '',
                 title: 'Lubelskie Owoce',  
                 short: 'logo',
