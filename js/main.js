@@ -183,11 +183,11 @@ Vue.component('page',{
                 picture:  '../img/hotelik.jpg',
                 title: 'Hotelik Kościerzyna', 
                 short: 'strona www, logo', 
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
+                description: 'Dla "Hoteliku Kościerzyna" stworzyłem stronę, tak naprawdę złożoną z kilku podstron, gdzie każda dotyczy innego obiektu firmy. Na każdej z podstron występuja elelementy opisowe, galerie, cennik, mapa Google.',
                 picture2: '../img/hotelik2.jpg',
-                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.',
-                link: '',
-                footerlink: ''  
+                description2: 'Oprócz strony internetowej stworzyłem logo.',
+                link: 'http://hotelik-koscierzyna.pl/',
+                footerlink: 'hotelik-koscierzyna.pl'  
               },
               {
                 index: 9,
@@ -196,22 +196,22 @@ Vue.component('page',{
                 picture:  '../img/cohannah.jpg',
                 title: 'Cohannah.com',
                 short: 'sklep internetowy, logo',  
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
-                picture2: '',
-                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.',
+                description: 'Cohannah.com to nieistniejący już sklep internetowy z artykułami dziecięcymi, stworzony w oparciu o platformę Prestashop, przy dużej ingerencji w kod szablonu i dużej jego personalizacji.',
+                picture2: '../img/cohannah2.png',
+                description2: 'Oprócz samego sklepu internetowego stworzyłem także logo sklepu, a także wszelkie grafiki użyte zarówno na stronie internetowej, jak i na Facebooku.',
                 link: '',
-                footerlink: ''  
+                footerlink: 'cohannah.com'  
               },
               {
                 index: 10,
                 background: 'url(../img/drutex.jpg)',
                 logo: '../img/logo_drutex.png',
-                picture:  '',
+                picture:  '../img/drutex1.jpg',
                 title: 'Drutex', 
                 short: 'wizja logo i identyfikacji wizualnej', 
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
-                picture2: '',
-                description2: 'aliquet auctor erat, ut maximus dolor consectetur et.',
+                description: 'Moja wizja logotypu oraz identyfikacji wizualnej firmy Drutex. Oprócz projektu logo, zawiera ona projekty wizytówek, papeterii, notatników, kopert czy oklejenia samochodów.',
+                picture2: '../img/drutex2.jpg',
+                description2: 'Jest to wyłącznie moja wizja i pomysł, jak alternatywa dla obecnie funkcjonującej identyfikacji wizualnej.',
                 link: '',
                 footerlink: ''  
               },
