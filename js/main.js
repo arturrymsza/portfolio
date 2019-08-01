@@ -126,6 +126,19 @@ Vue.component('page',{
               },
               {
                 index: 4,
+                background: 'url(../img/muzeum_samoch_plakat.jpg)',
+                logo: '../img/logo_muzeum.png',
+                picture:  '',
+                title: 'Muzeum Kolejnictwa', 
+                short: 'oprawa graficzna wystawy 250 lat samochodu', 
+                description: 'Projekty 8 plansz i plakatu wystawy pt. "250 lat samochodu"',
+                picture2: '../img/muzeum_samochodII.jpg',
+                description2: 'Projekt oparty jest na założeniu utrzymania żywej kolorystyki tła, z czarno-białym drugim tłem nawiązującym do temtu planszy. Często stosowałem wycięte sylwetki postaci lub przedmiotów. Fonty starają się nawiiązywać do klimatu jaki tworzy temat.',
+                link: 'http://muzeumkolejnictwa.com.pl/',
+                footerlink: 'muzeumkolejnictwa.com.pl' 
+              },
+              {
+                index: 5,
                 background: 'url(../img/szyca.jpg)',
                 logo: '../img/logo_szyca.png',
                 picture:  '../img/szyca1.png',
@@ -138,7 +151,7 @@ Vue.component('page',{
                 footerlink: 'arturrymsza.github.io/Szyca_Page'  
               },
               {
-                index: 5,
+                index: 6,
                 background: 'url(../img/driveforyou.jpg)',
                 logo: '../img/logo_drive.png',
                 picture:  '../img/driveforyou.jpg',
@@ -151,7 +164,7 @@ Vue.component('page',{
                 footerlink: 'driveforyou.pl'  
               },
               {
-                index: 6,
+                index: 7,
                 background: 'url(../img/packland.jpg)',
                 logo: '../img/logo_packland.png',
                 picture:  '../img/packland2.jpg',
@@ -164,7 +177,7 @@ Vue.component('page',{
                 footerlink: 'packland.sklep.pl'  
               },
               {
-                index: 7,
+                index: 8,
                 background: 'url(../img/sprytny.jpg)',
                 logo: '../img/logo_sprytny.png',
                 picture:  '../img/sprytny2.jpg',
@@ -177,7 +190,7 @@ Vue.component('page',{
                 footerlink: 'sprytnyrozklad.ovh'  
               },
               {
-                index: 8,
+                index: 9,
                 background: 'url(../img/hotelik.jpg)',
                 logo: '../img/logo_hotel.png',
                 picture:  '../img/hotelik.jpg',
@@ -190,7 +203,7 @@ Vue.component('page',{
                 footerlink: 'hotelik-koscierzyna.pl'  
               },
               {
-                index: 9,
+                index: 10,
                 background: 'url(../img/cohannah.jpg)',
                 logo: '../img/logo_cohannah.png',
                 picture:  '../img/cohannah.jpg',
@@ -203,7 +216,7 @@ Vue.component('page',{
                 footerlink: 'cohannah.com'  
               },
               {
-                index: 10,
+                index: 11,
                 background: 'url(../img/drutex.jpg)',
                 logo: '../img/logo_drutex.png',
                 picture:  '../img/drutex1.jpg',
@@ -216,7 +229,7 @@ Vue.component('page',{
                 footerlink: ''  
               },
               {
-                index: 11,
+                index: 12,
                 background: 'url(../img/apartamenty.jpg)',
                 logo: '../img/logo_apartamenty.png',
                 picture:  '',
@@ -229,7 +242,7 @@ Vue.component('page',{
                 footerlink: ''  
               },
               {
-                index: 12,
+                index: 13,
                 background: 'url(../img/game.jpg)',
                 logo: '',
                 picture:  '',
@@ -242,7 +255,7 @@ Vue.component('page',{
                 footerlink: ''  
               },
               {
-                index: 13,
+                index: 14,
                 background: 'url(../img/owoce.jpg)',
                 logo: '../img/logo_owoce.png',
                 picture:  '',
@@ -255,7 +268,7 @@ Vue.component('page',{
                 footerlink: ''  
               },
               {
-                index: 14,
+                index: 15,
                 background: 'url(../img/wlad_tlo.png)',
                 logo: '../img/wlad_obraz.png',
                 picture:  '',

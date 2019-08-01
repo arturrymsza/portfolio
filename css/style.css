@@ -417,7 +417,7 @@ body .sidenav_projects {
   transition: 0.5s;
   font-weight: 700;
   font-size: 20px;
-  color: #fff;
+  color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -524,7 +524,7 @@ body .sidenav_projects .sidenav .project .content {
 }
 
 body .sidenav_projects .sidenav .project .content .content-header {
-  background-color: red;
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -555,7 +555,7 @@ body .sidenav_projects .sidenav .project .content .content-header .content-pictu
 }
 
 body .sidenav_projects .sidenav .project .content .content-description {
-  background-color: blue;
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -574,7 +574,7 @@ body .sidenav_projects .sidenav .project .content .content-description {
 }
 
 body .sidenav_projects .sidenav .project .content .content-description2 {
-  background-color: violet;
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -596,7 +596,7 @@ body .sidenav_projects .sidenav .project .content .content-description2 img {
 }
 
 body .sidenav_projects .sidenav .project .content .content-footer {
-  background-color: yellow;
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
