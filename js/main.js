@@ -1,6 +1,8 @@
 var projectsnav = document.getElementById("projectssidenav");
 var aboutnav = document.getElementById("aboutsidenav");
 
+alert('UWAGA! STRONA W BUDOWIE! Wiele elementów nie działa prawidłowo! Wersja tylko na komputer! Brak responsywności!');
+
 function openNav1() {
     projectsnav.style.width = "100%";
 }
